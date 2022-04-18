@@ -26,12 +26,12 @@ wand.deck_capacity = {2,3}
 wand.actions_per_round = 1
 wand.reload_time = {2,10}
 wand.shuffle_deck_when_empty = 0
-wand.fire_rate_wait = {10,35}
+wand.fire_rate_wait = {1,35}
 wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = {350,540}
 wand.mana_max = {640,940}
-wand.actions = { "NUKE", "NUKE" }
+wand.actions = { "NUKE", "DIGGER", "MISSILE" }
 
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )
@@ -51,11 +51,7 @@ ComponentObjectSetValue( ability_comp, "gunaction_config", "speed_multiplier", w
 ComponentSetValue( ability_comp, "mana_max", mana_max )
 ComponentSetValue( ability_comp, "mana", mana_max )
 
-if ( Random( 1, 10 ) > 2 ) then
-	AddGunActionPermanent( entity_id, "OIL_TRAIL" )
-else
-	AddGunAction( entity_id, "TORCH" )
-end
+AddGunActionPermanent( entity_id, "MATTER_EATER" )
 
 local wand_action = get_random_from( wand.actions )
 AddGunAction( entity_id, wand_action )

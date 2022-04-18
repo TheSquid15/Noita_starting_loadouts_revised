@@ -21,7 +21,7 @@ SetRandomSeed( x, y )
 local ability_comp = EntityGetFirstComponent( entity_id, "AbilityComponent" )
 
 local wand = { }
-wand.name = {"god_wand"}
+wand.name = {"god_wand", "giga_chad_wand"}
 wand.deck_capacity = {3,7}
 wand.actions_per_round = 1
 wand.reload_time = {10,50}
@@ -35,7 +35,7 @@ wand.mana_max = 1337
 wand.actions = { "LIGHTNING", "THUNDERBALL" }
 wand.modifiers = { "FREEZE", "MATTER_EATER"}
 
-local mana_max = get_random_between_range( wand.mana_max )
+local mana_max = wand.mana_max
 local deck_capacity = get_random_between_range( wand.deck_capacity )
 
 ComponentSetValue( ability_comp, "ui_name", get_random_from( wand.name ) )
