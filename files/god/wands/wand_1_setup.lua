@@ -22,11 +22,11 @@ local ability_comp = EntityGetFirstComponent( entity_id, "AbilityComponent" )
 
 local wand = { }
 wand.name = {"god_wand"}
-wand.deck_capacity = {5,10}
-wand.actions_per_round = 2
-wand.reload_time = {1,2}
+wand.deck_capacity = {3,7}
+wand.actions_per_round = 1
+wand.reload_time = {10,50}
 wand.shuffle_deck_when_empty = 0
-wand.fire_rate_wait = {0,3}
+wand.fire_rate_wait = {1,20}
 wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = 1337
@@ -42,7 +42,7 @@ ComponentSetValue( ability_comp, "ui_name", get_random_from( wand.name ) )
 
 ComponentObjectSetValue( ability_comp, "gun_config", "reload_time", get_random_between_range( wand.reload_time ) )
 ComponentObjectSetValue( ability_comp, "gunaction_config", "fire_rate_wait", get_random_between_range( wand.fire_rate_wait ) )
-ComponentSetValue( ability_comp, "mana_charge_speed", get_random_between_range( wand.mana_charge_speed ) )
+ComponentSetValue( ability_comp, "mana_charge_speed", wand.mana_charge_speed )
 
 ComponentObjectSetValue( ability_comp, "gun_config", "actions_per_round", wand.actions_per_round )
 ComponentObjectSetValue( ability_comp, "gun_config", "deck_capacity", deck_capacity )
@@ -54,7 +54,7 @@ ComponentSetValue( ability_comp, "mana_max", mana_max )
 ComponentSetValue( ability_comp, "mana", mana_max )
 
 local action_count = 2
-local modifier_count = math.min( deck_capacity - action_count, Random( 1, 2) )
+local modifier_count = 2
 
 for i=1,modifier_count do
 	local wand_modifier = get_random_from( wand.modifiers )

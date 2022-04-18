@@ -31,7 +31,7 @@ wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = {350,540}
 wand.mana_max = {640,940}
-wand.actions = { "NUKE", "ROCKET" }
+wand.actions = { "NUKE", "NUKE" }
 
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )
