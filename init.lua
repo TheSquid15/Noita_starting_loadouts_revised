@@ -13,7 +13,7 @@ function OnPlayerSpawned( player_entity ) -- this runs when player entity has be
 	SetRandomSeed( x + 344, y - 523 )
 	
 	local loadout_rnd = Random( 1, #loadout_list )
-	-- loadout_rnd = 5
+	-- loadout_rnd = 3
 	local loadout_choice = loadout_list[loadout_rnd]
 	
 	local loadout_name = loadout_choice.name
