@@ -21,17 +21,17 @@ SetRandomSeed( x, y )
 local ability_comp = EntityGetFirstComponent( entity_id, "AbilityComponent" )
 
 local wand = { }
-wand.name = {"fire_wand"}
+wand.name = {"nuke_wand"}
 wand.deck_capacity = {2,3}
 wand.actions_per_round = 1
-wand.reload_time = {35,65}
+wand.reload_time = {2,10}
 wand.shuffle_deck_when_empty = 0
-wand.fire_rate_wait = {35,65}
+wand.fire_rate_wait = {10,35}
 wand.spread_degrees = 0
 wand.speed_multiplier = 1
-wand.mana_charge_speed = {20,40}
-wand.mana_max = {130,160}
-wand.actions = { "FIREBALL", "ROCKET" }
+wand.mana_charge_speed = {350,540}
+wand.mana_max = {640,940}
+wand.actions = { "NUKE", "ROCKET" }
 
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )
