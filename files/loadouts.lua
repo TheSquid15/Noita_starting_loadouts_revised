@@ -19,6 +19,8 @@ loadout_list =
 			"UNLIMITED_SPELLS",
 			"FREEZE_FIELD",
 			"EDIT_WANDS_EVERYWHERE",
+			"BREATH_UNDERWATER",
+			"TELEKINESIS",
 		},
 	},
 	{

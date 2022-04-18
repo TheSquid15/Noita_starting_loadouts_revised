@@ -22,17 +22,16 @@ local ability_comp = EntityGetFirstComponent( entity_id, "AbilityComponent" )
 
 local wand = { }
 wand.name = {"god_wand", "giga_chad_wand"}
-wand.deck_capacity = {3,7}
-wand.actions_per_round = 1
-wand.reload_time = {10,50}
+wand.deck_capacity = {5,7}
+wand.actions_per_round = 2
+wand.reload_time = {1,20}
 wand.shuffle_deck_when_empty = 0
 wand.fire_rate_wait = {1,20}
 wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = 1337
 wand.mana_max = 1337
--- wand.actions = { "LUMINOUS_DRILL","MEGALASER","CHAINSAW" }
-wand.actions = { "LIGHTNING", "THUNDERBALL" }
+wand.actions = { "LUMINOUS_DRILL","MEGALASER","CHAINSAW", "LIGHTNING", "THUNDERBALL"}
 wand.modifiers = { "FREEZE", "MATTER_EATER"}
 
 local mana_max = wand.mana_max
