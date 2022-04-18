@@ -31,8 +31,8 @@ wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = 1337
 wand.mana_max = 1337
-wand.actions = { "MEGALASER", "MEGALASER" }
-wand.modifiers = {"CHAINSAW","CHAINSAW","CHAINSAW"}
+wand.actions = { "LUMINOUS_DRILL","MEGALASER","CHAINSAW" }
+wand.modifiers = { "FREEZE", "MATTER_EATER"}
 
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )
@@ -67,7 +67,7 @@ for i=1,modifier_count do
 	end
 end
 
-for i=2,action_count do
+for i=1,action_count do
 	local wand_action = get_random_from( wand.actions )
 	
 	--AddGunActionPermanent( entity_id, wand_action )

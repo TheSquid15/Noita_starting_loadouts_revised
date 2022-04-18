@@ -4,7 +4,7 @@ loadout_list =
 		name = "a God TYPE",
 		folder = "god",
 		-- NOTE: Usually the game uses ARGB format for colours, but the cape colour uses ABGR here instead
-		cape_color = 0xff7d4e53,
+		cape_color = 0xff9d7b4d,
 		cape_color_edge = 0xff846235,
 		items = 
 		{
@@ -18,6 +18,7 @@ loadout_list =
 			"EXPLODING_CORPSES",
 			"UNLIMITED_SPELLS",
 			"FREEZE_FIELD",
+			"EDIT_WANDS_EVERYWHERE",
 		},
 	},
 	{
