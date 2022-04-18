@@ -31,7 +31,8 @@ wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = 1337
 wand.mana_max = 1337
-wand.actions = { "LUMINOUS_DRILL","MEGALASER","CHAINSAW" }
+-- wand.actions = { "LUMINOUS_DRILL","MEGALASER","CHAINSAW" }
+wand.actions = { "LIGHTNING", "THUNDERBALL" }
 wand.modifiers = { "FREEZE", "MATTER_EATER"}
 
 local mana_max = get_random_between_range( wand.mana_max )
@@ -46,13 +47,13 @@ ComponentSetValue( ability_comp, "mana_charge_speed", get_random_between_range( 
 ComponentObjectSetValue( ability_comp, "gun_config", "actions_per_round", wand.actions_per_round )
 ComponentObjectSetValue( ability_comp, "gun_config", "deck_capacity", deck_capacity )
 ComponentObjectSetValue( ability_comp, "gun_config", "shuffle_deck_when_empty", wand.shuffle_deck_when_empty )
-ComponentObjectSetValue( ability_comp, "gunaction_config", "spread_degrees", get_random_between_range( wand.spread_degrees ) )
+ComponentObjectSetValue( ability_comp, "gunaction_config", "spread_degrees", wand.spread_degrees )
 ComponentObjectSetValue( ability_comp, "gunaction_config", "speed_multiplier", wand.speed_multiplier )
 
 ComponentSetValue( ability_comp, "mana_max", mana_max )
 ComponentSetValue( ability_comp, "mana", mana_max )
 
-local action_count = 1
+local action_count = 2
 local modifier_count = math.min( deck_capacity - action_count, Random( 1, 2) )
 
 for i=1,modifier_count do
