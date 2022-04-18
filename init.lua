@@ -129,8 +129,5 @@ end
 -- For example for 'player.png' the corresponding UV source file is called 'player_uv_src.png'
 -- ModDevGenerateSpriteUVsForDirectory() must be called in init.lua file scope. It doesn't do anything outside noita_dev.exe.
 ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/fire" ) 
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/slime" ) 
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/summoner" ) 
 ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/thunder" ) 
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/eldritch" ) 
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/butcher" ) 
+ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/god" ) 
