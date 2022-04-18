@@ -1,4 +1,4 @@
-dofile( "mods/starting_loadouts/files/loadouts.lua" )
+dofile( "mods/starting_loadouts_2/files/loadouts.lua" )
 dofile( "data/scripts/perks/perk.lua" )
 
 function OnPlayerSpawned( player_entity ) -- this runs when player entity has been created
@@ -52,12 +52,12 @@ function OnPlayerSpawned( player_entity ) -- this runs when player entity has be
 	
 	-- set player sprite (since we change only one value, ComponentSetValue is fine)
 	local player_sprite_component = EntityGetFirstComponent( player_entity, "SpriteComponent" )
-	local player_sprite_file = "mods/starting_loadouts/files/" .. loadout_choice.folder .. "/player.xml"
+	local player_sprite_file = "mods/starting_loadouts_2/files/" .. loadout_choice.folder .. "/player.xml"
 	ComponentSetValue( player_sprite_component, "image_file", player_sprite_file )
 	
 	-- set player arm sprite
 	local player_arm_sprite_component = EntityGetFirstComponent( player_arm, "SpriteComponent" )
-	local player_arm_sprite_file = "mods/starting_loadouts/files/" .. loadout_choice.folder .. "/player_arm.xml"
+	local player_arm_sprite_file = "mods/starting_loadouts_2/files/" .. loadout_choice.folder .. "/player_arm.xml"
 	ComponentSetValue( player_arm_sprite_component, "image_file", player_arm_sprite_file )
 	
 	-- set player cape colour (since we're changing multiple variables, we'll use the edit_component() utility)
@@ -68,7 +68,7 @@ function OnPlayerSpawned( player_entity ) -- this runs when player entity has be
 	
 	-- set player ragdoll
 	local player_ragdoll_component = EntityGetFirstComponent( player_entity, "DamageModelComponent" )
-	local player_ragdoll_file = "mods/starting_loadouts/files/" .. loadout_choice.folder .. "/ragdoll/filenames.txt"
+	local player_ragdoll_file = "mods/starting_loadouts_2/files/" .. loadout_choice.folder .. "/ragdoll/filenames.txt"
 	ComponentSetValue( player_ragdoll_component, "ragdoll_filenames_file", player_ragdoll_file )
 
 	-- set inventory contents
@@ -128,6 +128,6 @@ end
 -- Stainable sprites should have a corresponding SPRITE_NAME_uv_src.png next to the sprite file, and the folder containing the sprite should be passed to ModDevGenerateSpriteUVsForDirectory().
 -- For example for 'player.png' the corresponding UV source file is called 'player_uv_src.png'
 -- ModDevGenerateSpriteUVsForDirectory() must be called in init.lua file scope. It doesn't do anything outside noita_dev.exe.
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/fire" ) 
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/thunder" ) 
-ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts/files/god" ) 
+ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts_2/files/fire" ) 
+ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts_2/files/thunder" ) 
+ModDevGenerateSpriteUVsForDirectory( "mods/starting_loadouts_2/files/god" ) 

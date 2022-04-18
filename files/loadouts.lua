@@ -8,8 +8,8 @@ loadout_list =
 		cape_color_edge = 0xff846235,
 		items = 
 		{
-			"mods/starting_loadouts/files/god/wands/wand_1.xml",
-			"mods/starting_loadouts/files/god/wands/wand_2.xml",
+			"mods/starting_loadouts_2/files/god/wands/wand_1.xml",
+			"mods/starting_loadouts_2/files/god/wands/wand_2.xml",
 			"data/entities/items/pickup/potion_water.xml",
 			
 		},
@@ -28,10 +28,10 @@ loadout_list =
 		cape_color_edge = 0xff3e43af,
 		items = 
 		{
-			"mods/starting_loadouts/files/fire/wands/wand_1.xml",
-			"mods/starting_loadouts/files/fire/wands/wand_2.xml",
+			"mods/starting_loadouts_2/files/fire/wands/wand_1.xml",
+			"mods/starting_loadouts_2/files/fire/wands/wand_2.xml",
 			{
-			"mods/starting_loadouts/files/fire/potion_fire.xml",
+			"mods/starting_loadouts_2/files/fire/potion_fire.xml",
 			amount = 2,
 			},
 		},
@@ -48,8 +48,8 @@ loadout_list =
 		cape_color_edge = 0xff846235,
 		items = 
 		{
-			"mods/starting_loadouts/files/thunder/wands/wand_1.xml",
-			"mods/starting_loadouts/files/thunder/wands/wand_2.xml",
+			"mods/starting_loadouts_2/files/thunder/wands/wand_1.xml",
+			"mods/starting_loadouts_2/files/thunder/wands/wand_2.xml",
 			"data/entities/items/pickup/thunderstone.xml",
 		},
 		perks =
