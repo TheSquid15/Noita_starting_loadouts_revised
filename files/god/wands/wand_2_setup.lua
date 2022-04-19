@@ -22,11 +22,11 @@ local ability_comp = EntityGetFirstComponent( entity_id, "AbilityComponent" )
 
 local wand = { }
 wand.name = {"nuke_wand"}
-wand.deck_capacity = {2,3}
+wand.deck_capacity = {3,6}
 wand.actions_per_round = 1
-wand.reload_time = {2,10}
+wand.reload_time = {0,10}
 wand.shuffle_deck_when_empty = 0
-wand.fire_rate_wait = {1,35}
+wand.fire_rate_wait = {1,12}
 wand.spread_degrees = 0
 wand.speed_multiplier = 1
 wand.mana_charge_speed = {350,540}
